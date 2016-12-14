@@ -70,7 +70,7 @@ public OnPluginStart()
 	
 
 	// Convars
-	h_cvarVersion     = CreateConVar("sm_teamchange_unlimited_version", PLUGIN_VERSION, "Plugin version", FCVAR_CHEAT|FCVAR_DONTRECORD|FCVAR_NOTIFY|FCVAR_PLUGIN|FCVAR_SPONLY);
+	h_cvarVersion     = CreateConVar("sm_teamchange_unlimited_version", PLUGIN_VERSION, "Plugin version", FCVAR_CHEAT|FCVAR_DONTRECORD|FCVAR_NOTIFY|FCVAR_SPONLY);
 	h_cvarChat        = CreateConVar("sm_teamchange_unlimited_chat", "1", "Give plugin feedback to players in chat (1 - verbose, 0 - silent)", FCVAR_NOTIFY, true, 0.0, true, 1.0);
 	h_cvarSuicide     = CreateConVar("sm_teamchange_unlimited_suicide", "1", "Force suicide on alive players who switch teams (1 - force suicide, 0 - no suicide)", FCVAR_NOTIFY, true, 0.0, true, 1.0);
 	h_cvarASuicide    = CreateConVar("sm_teamchange_unlimited_suicide_admin", "1", "Force suicide on alive admins who switch teams (admin override: teamchange_unlimited_suicide_admin)", FCVAR_NOTIFY, true, 0.0, true, 1.0);
@@ -82,7 +82,7 @@ public OnPluginStart()
 	h_cvarRestrict[3] = CreateConVar("sm_teamchange_unlimited_restrict_ct", "0", "Restrict players from joining counter-terrorists (1 - restrict, 0 - allow)", FCVAR_NOTIFY, true, 0.0, true, 1.0);
 	h_cvarPenalty     = CreateConVar("sm_teamchange_unlimited_penalty", "011111101101", "Count auto-assign team change");
 	h_cvarImmunity    = CreateConVar("sm_teamchange_unlimited_immunity", "0", "Admins receive team change count immunity (admin override: teamchange_unlimited_immunity)", FCVAR_NOTIFY, true, 0.0, true, 1.0);
-	h_cvarSpawnpoints     = CreateConVar("sm_teamchange_unlimited_obeyspawnpoints", "0", "The plugin obey spawnpoints and will not have more players that spawnpoints in a team (tested only in CS:S and CS:GO)", FCVAR_NOTIFY, true, 0.0, true, 1.0);
+	h_cvarSpawnpoints     = CreateConVar("sm_teamchange_unlimited_obeyspawnpoints", "1", "The plugin obey spawnpoints and will not have more players that spawnpoints in a team (tested only in CS:S and CS:GO)", FCVAR_NOTIFY, true, 0.0, true, 1.0);
 	h_cvarLimitTeams  = FindConVar("mp_limitteams");
 	
 	// Convar hooks
